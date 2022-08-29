@@ -22,7 +22,7 @@ function App() {
     </> : 
     <div className='loading-bg'>
           <div className="spinner-grow text-primary loading" role="status">
-              <span className="sr-only"></span>
+              <span className="sr-only"> </span>
           </div>
     </div>}
   </>
