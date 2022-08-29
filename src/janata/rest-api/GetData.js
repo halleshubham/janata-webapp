@@ -1,8 +1,8 @@
-
+import wp_config from "../config";
 
 var baseUrl = "https://janataweekly.org/wp-json/wp/v2/";
 
-var graphql = "https://janataweekly.org/graphql"
+var graphql = wp_config().website+"/graphql"
 
 export function getCategories(){
     return fetch(baseUrl+"categories?per_page=30")
@@ -28,6 +28,11 @@ export function getPosts(iso8601Date){ // 2022-08-20T00:00:00
 
 export function getGraphqlPosts(iso8601Date){
   var GRAPHQL_POSTS = `{
+    generalSettings {
+      title
+      url
+      description
+    },
     posts(after: "`+iso8601Date+`T00:00:00") {
       nodes {
         author {

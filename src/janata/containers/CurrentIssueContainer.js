@@ -7,14 +7,9 @@ import ArticleCard from './ArticleCard';
 import CoverArticle from './CoverArticle';
 import { Button } from 'react-bootstrap';
 
-export default function CurrentIssueContainer() {
+export default function CurrentIssueContainer({currentIssueList}) {
 
-    const [postList, setPostList] = useState([]);
-
-    useEffect(()=>{
-        getGraphqlPosts('2022-08-28')
-        .then((data)=>setPostList(data.posts.nodes))
-    },[])
+    const [postList, setPostList] = useState(currentIssueList);
 
     console.log("CurrentIssueContainer Rendered...");
 

@@ -7,7 +7,7 @@ import {useState, useEffect} from 'react';
 import { getCategories } from '../rest-api/GetData';
 import TranslatedArticlesDropDownList from './TranslatedArticlesDropDownList'
 
-export default function JanataHeader() {
+export default function JanataHeader({config}) {
   const [categoryList,setCategoryList]= useState([{}]);
 
   useEffect(()=>{
@@ -19,9 +19,9 @@ export default function JanataHeader() {
   return (
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="https://janataweekly.org/">Janata Weekly
+        <Navbar.Brand href={config.url}>{config.title}
                 <div className='tagline'>
-                  India's Oldest Socialist Weekly!
+                {config.description}
                 </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

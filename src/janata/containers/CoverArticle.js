@@ -12,7 +12,7 @@ export default function CoverArticle({data}) {
         <Row className="article-card">
             <Col md={12}>
             <a href={data.link}>
-                <img className="article-card-img img-fluid" src={data.featuredImage.node.mediaDetails.sizes[1].sourceUrl}></img>
+                <img className="article-card-img img-fluid" src={data.featuredImage.node.mediaDetails.sizes[2].sourceUrl}></img>
             </a>
             </Col>
             <Col md>
