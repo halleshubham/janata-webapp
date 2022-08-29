@@ -3,6 +3,7 @@ import Main from './main/Main';
 import wp_config from './config';
 import { useState, useEffect } from 'react';
 import { getGraphqlPosts } from './rest-api/GetData';
+import StickySocialBar from './containers/StickySocialBar';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     { Object.keys(data).length != 0 ? <> 
       <JanataHeader config={data.generalSettings}/>
       <Main currentIssueList={data.posts.nodes}/>
+      <StickySocialBar />
     </> : 
     <div className='loading-bg'>
           <div className="spinner-grow text-primary loading" role="status">

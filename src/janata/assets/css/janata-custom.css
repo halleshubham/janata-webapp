@@ -124,6 +124,20 @@ html {
     height: 550px;
 }
 
+.sticky-social-bar {
+    position: fixed;
+    display: block;
+    max-width: 2em;
+    right:0;
+    bottom:40%;
+    background-color: #D82275;
+    color: white;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    padding-left: 0.5em;
+}
+
+
 /* <div className="article-card">
         <img className="article-card-img" src={data.jetpack_featured_media_url}></img>
         <div className='article-card-title'>{data.title.rendered}</div>
